@@ -1,3 +1,3 @@
 # My-Portfolio
 
-Live demo [here](https://dejtes.netlify.app)
+Live demo [here](https://dejtes.com/)
