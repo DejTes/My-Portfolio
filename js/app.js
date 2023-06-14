@@ -106,7 +106,7 @@ function fadeInSkills() {
       box.style.opacity = 1;
       box.style.transform = "translateX(0)";
     }, delay);
-    delay += 150; // Adjust the delay time between each skill box
+    delay += 150; 
   });
 }
 
@@ -119,3 +119,4 @@ window.addEventListener("scroll", () => {
     fadeInSkills();
   }
 });
+
