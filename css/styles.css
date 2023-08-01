@@ -244,7 +244,7 @@ Navbar
 @media screen and (min-width: 600px) {
   .nav {
     background: var(--clr-primary-10);
-    /* background-color: #121212; */
+
   }
   .nav-btn {
     display: none;
