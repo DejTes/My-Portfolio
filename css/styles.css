@@ -244,14 +244,13 @@ Navbar
 @media screen and (min-width: 600px) {
   .nav {
     background: var(--clr-primary-10);
-
   }
   .nav-btn {
     display: none;
   }
   .nav-links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     column-gap: 2rem;
     justify-self: end;
@@ -367,12 +366,11 @@ Hero
   display: none;
 }
 .hero {
-
   background: linear-gradient(
     150deg,
     rgba(225, 230, 233, 0.607) 50%,
     rgba(250, 250, 248, 0.532) 50%
-  ); 
+  );
 }
 /* substructing navbar rem  */
 .hero-center {
@@ -386,7 +384,6 @@ Hero
 }
 .hero-icons {
   justify-items: start;
- 
 }
 .hero-icons:hover {
   color: var(--clr-primary-5);
@@ -414,7 +411,6 @@ Hero
     top: 2rem;
     right: -2rem;
     border-radius: var(--radius);
-
   }
 }
 
@@ -620,7 +616,7 @@ Connect
   max-width: 30rem;
 }
 .video-banner {
-  background: var(--clr-primary-10);
+  background: lightblue;
   padding: 3rem 5rem 12rem 5rem;
   text-align: center;
   -webkit-clip-path: polygon(
@@ -661,109 +657,102 @@ Skills
 ===================================================================================================
 */
 
-  .skills-section{
+.skills-section {
   padding-top: 20px;
-background-color: #f3f9f9c9;
-border-radius: 12px;
-  }
-  
-  .skills-header{
+  background-color: #f3f9f9c9;
+  border-radius: 12px;
+}
+
+.skills-header {
   text-align: center;
   color: black;
   padding: 1rem;
   position: relative;
-  }
-  
-  
-  
-  .skills-container{
+}
+
+.skills-container {
   display: grid;
-  grid-tempLate-columns: repeat(5, 1fr);
-  justify-content:center;
-  align-items:center;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  grid-gap:1rem;
+  grid-gap: 1rem;
   padding: 1rem 80px;
   font-size: 1.2rem;
+}
 
-  }
+.skills-box {
+  padding: 0.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-100px); /* Initial position outside the viewport */
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
 
-  .skills-box {
-    padding: .5rem;
-    cursor:pointer;
-    opacity: 0;
-    transform: translateX(-100px); /* Initial position outside the viewport */
-    transition: opacity 0.75s ease, transform 0.75s ease;
-  }
-  
+.skills-box:hover > .skills-title::after,
+.skills-box:hover > .skills-title::before {
+  width: 30px;
+}
 
-  .skills-box:hover > .skills-title::after,
-  .skills-box:hover > .skills-title::before {
-      width: 30px;
-  }
-  
-  .skills-box:hover .skills-img{
+.skills-box:hover .skills-img {
   transform: scale(1.1);
-  
-  }
-  
-  .skills-title{
-  display:flex;
+}
+
+.skills-title {
+  display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 
   position: relative;
- 
-  }
+}
 
-  .skills-icons{
-  width:50px;
-  z-index:2;
-  }
-  
-  .skills-img{
-  width:100px;
-  height:100px;
+.skills-icons {
+  width: 50px;
+  z-index: 2;
+}
+
+.skills-img {
+  width: 100px;
+  height: 100px;
   position: relative;
   border-radius: 45px;
-  background-color:rgb(255, 255, 255);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  transition: .5s;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
   z-index: 1;
-  }
+}
 
-  .skills-img:after{
-  content: '';
-  position:absolute;
-  top:0;
+.skills-img:after {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 0;
-  width:50px;
-  height:100px;
+  width: 50px;
+  height: 100px;
   background: rgba(178, 182, 182, 0.677);
   border-radius: 50px 0 0 50px;
- 
-  } 
-  .skills-title h3{
+}
+.skills-title h3 {
   color: #333;
   margin-top: 0.5rem;
+}
+@media screen and (max-width: 990px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 50px;
   }
-  @media screen and (max-width:990px){
-   .skills-container{
-   grid-tempLate-columns: repeat(3, 1fr);
-   padding: 2rem 50px;
-   }
+}
+
+@media screen and (max-width: 650px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
   }
-  
-  @media screen and (max-width:650px){
-   .skills-container{
-    grid-tempLate-columns: repeat(2, 1fr);
-   padding: 2rem 50px;
-   }
-  }
+}
 
 /*
 =================================================================================================== 
@@ -855,11 +844,11 @@ BASIC PROJECTS
 }
 .card-front {
   /* background: rgb(229, 226, 198); */
-  background: #9cbac0;
+  background: lightblue;
 }
 
 .card-back {
-  background: var(--clr-primary-10);
+  background: #a6d9df;
   transform: rotateY(180deg);
   display: grid;
   place-items: center;

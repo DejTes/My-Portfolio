@@ -78,21 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize ScrollReveal
   const sr = ScrollReveal({
-    distance: "50px",
-    duration: 2000,
+    distance: "200px",
+    duration: 1000,
     easing: "ease-in-out",
     reset: true,
   });
 
   // Reveal animation for projects section
-  sr.reveal("#projects", { origin: "left" });
   sr.reveal("#home", { origin: "top" });
+  sr.reveal("#about", { origin: "bottom" });
+  sr.reveal("#projects", { origin: "bottom" });
 
   // Reveal animation for about me section
-  sr.reveal("#about", { origin: "right" });
+  sr.reveal("#skills", { origin: "top" });
+  sr.reveal("#freelance", { origin: "bottom" });
 
   sr.reveal("#contact", { origin: "bottom" });
-  sr.reveal("#footer", { origin: "right" });
+  sr.reveal("#footer", { origin: "top" });
 });
 
 // skills section
@@ -106,7 +108,7 @@ function fadeInSkills() {
       box.style.opacity = 1;
       box.style.transform = "translateX(0)";
     }, delay);
-    delay += 150; 
+    delay += 150;
   });
 }
 
@@ -119,4 +121,3 @@ window.addEventListener("scroll", () => {
     fadeInSkills();
   }
 });
-
