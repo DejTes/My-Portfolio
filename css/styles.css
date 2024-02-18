@@ -84,6 +84,18 @@ img:not(.nav-logo) {
   display: block;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1; color: var(--clr-primary-5)
+  }
+  50% {
+    opacity: 0.4; color: var(--clr-new-primary-3)
+  }
+  100% {
+    opacity: 1; color: var(--clr-primary-5)
+  }
+}
+
 .name {
   margin: 0 0px;
   font-family: "Ubuntu", sans-serif;
@@ -93,6 +105,7 @@ img:not(.nav-logo) {
   text-align: center;
   text-shadow: 1px 1px 0px var(--clr-grey-3), 2px 2px 0px var(--clr-grey-2),
     3px 3px 0px var(--clr-grey-1);
+  animation: blink 3s infinite;
 }
 
 h1,
@@ -241,6 +254,16 @@ Navbar
   justify-self: end;
   justify-items: top;
 }
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--clr-primary-5),
+    #e9dc49dc,
+    var(--clr-primary-5)
+  );
+}
+
 @media screen and (min-width: 600px) {
   .nav {
     background: var(--clr-primary-10);
