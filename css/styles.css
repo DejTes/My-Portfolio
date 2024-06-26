@@ -101,11 +101,11 @@ img:not(.nav-logo) {
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: var(--clr-primary-5);
+  color: black;
   text-align: center;
-  text-shadow: 1px 1px 0px var(--clr-grey-3), 2px 2px 0px var(--clr-grey-2),
+  /* text-shadow: 1px 1px 0px var(--clr-grey-3), 2px 2px 0px var(--clr-grey-2),
     3px 3px 0px var(--clr-grey-1);
-  animation: blink 3s infinite;
+  animation: blink 3s infinite; */
 }
 
 h1,
@@ -507,7 +507,7 @@ Projects
   margin-top: 2rem;
 }
 .project {
-  outline: 0.125rem solid #4ba2b4;
+  outline: 0.125rem solid #3690a2;
   outline-offset: 0.25rem;
   border-radius: 0.5rem;
   /* margin-top: 2rem; */
@@ -570,11 +570,13 @@ Projects
 
 @media screen and (min-width: 1170px) {
   .projects-center {
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 200px 200px;
     gap: 1rem;
     grid-template-areas:
-      "a b b"
-      "a c d";
+      "a b b c"
+      "a d e f";
+    
   }
   .project-img {
     height: 100%;
@@ -595,7 +597,14 @@ Projects
   .project-4 {
     grid-area: d;
   }
+  .project-5 {
+    grid-area: e;
+  }
+  .project-6 {
+    grid-area: f;
+  }
 }
+
 /*
 =============== 
 Connect
@@ -866,7 +875,6 @@ BASIC PROJECTS
   border-radius: var(--radius);
 }
 .card-front {
-  /* background: rgb(229, 226, 198); */
   background: lightblue;
 }
 
