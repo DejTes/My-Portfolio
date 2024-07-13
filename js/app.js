@@ -42,7 +42,28 @@ document.addEventListener("DOMContentLoaded", function () {
   navBtn.addEventListener("click", function () {
     navLinks.classList.toggle("show-links");
   });
+
+
+
+ // Hero section animation
+ const heroInfo = document.querySelector('.hero-info');
+ const heroImg = document.querySelector('.hero-img');
+
+ heroInfo.style.opacity = '1';
+ heroInfo.style.transform = 'translateX(0)';
+
+ heroImg.style.opacity = '1';
+ heroImg.style.transform = 'translateX(0)';
+
+
+
 });
+
+
+
+
+
+
 
 // contact me form function
 function sendEmail() {
